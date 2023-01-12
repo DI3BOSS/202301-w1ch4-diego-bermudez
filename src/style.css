@@ -9,9 +9,17 @@
 
 :root {
   --color-corporative: #ed6436;
+  --color-secondary: #fff;
   --font-color: #181818;
   --padding-vertical: 30px;
   --padding-horizontal: 72px;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: inherit;
 }
 
 body {
@@ -48,7 +56,7 @@ h1 {
 
   background-color: var(--color-corporative);
 
-  color: #fff;
+  color: var(--color-secondary);
   text-transform: uppercase;
   font-size: 1.625rem;
   font-weight: 800;
@@ -56,8 +64,48 @@ h1 {
 }
 
 .top-section__view--active:hover {
-  background-color: #fff;
+  background-color: var(--color-secondary);
   color: var(--color-corporative);
   border-color: var(--color-corporative);
   border: solid 3px;
+}
+
+.main-section {
+  padding-top: 20px;
+  height: 525px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.main-section__cards :nth-child(1) {
+  min-height: 525px;
+  padding: 20px;
+  overflow: hidden;
+  display: flex;
+  margin: 30px;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: transparent;
+}
+
+.first-card {
+  background-image: url(/src/media/01.jpg);
+  border-radius: 20px;
+}
+
+.second-card {
+  background-image: url(/src/media/02.jpg);
+  border-radius: 20px;
+}
+
+.third-card {
+  background-image: url(/src/media/03.jpg);
+  border-radius: 20px;
+}
+
+.main-section__cards :nth-child(1):hover {
+  color: var(--color-secondary);
+  text-shadow: 1px 0 10px #181818;
 }
